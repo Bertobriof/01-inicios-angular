@@ -1,0 +1,14 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!-- onDelete -->
+    <!-- Para borrar invoco al evento que he creado onDeleteId y paso el dato que recoge en el método con $event -->
+    <app-dbz-list [characterList]="characters" (onDeleteId)="onDeleteCharacter($event)"></app-dbz-list>
+  </div>
+  <div class="col">
+    <!--Add character-->
+    <app-dbz-add-character (onNewCharacter)="onNewCharacter($event)"></app-dbz-add-character>
+  </div>
+</div>
